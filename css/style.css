@@ -55,12 +55,17 @@ h1 {
 
 #category,
 #progress,
-#plan {
+#plan,
+#trainingstep {
   background-color: #000;
 }
 
 .categoryData,
-.progressContainer {
+.progressContainer,
+.planContainer,
+.firstTrainingContainer,
+.thirdTrainingContainer,
+.secondTrainingContainer {
   background-color: #1b1b1b;
   margin: 0px 28px;
   border-radius: 80px;
@@ -238,7 +243,7 @@ header .container nav .btns .signUp {
   display: flex;
   justify-content: space-between;
   gap: 112px;
-  
+
   h1 {
     text-align: left;
     width: 450px;
@@ -251,5 +256,254 @@ header .container nav .btns .signUp {
     line-height: 168%;
     width: 370px;
     text-align: left;
+  }
+}
+
+/* plans section */
+
+#plan .planContainer {
+  padding: 84px;
+}
+
+#plan .planCardContainer {
+  margin-top: 86px;
+  display: flex;
+  gap: 99px;
+
+  .planCard {
+    background-color: #000;
+    width: 395px;
+    border-radius: 70px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    /* background: linear-gradient(rgba(0,0,0,.9), rgba(0,0,0,.6)), url('../Images/img2.jpg'); 
+    background-position: top; 
+    background-repeat: no-repeat;
+    background-size: contain; */
+
+    img {
+      border-radius: 70px 70px 0px 0px;
+    }
+
+    .benefits {
+      padding: 40px;
+    }
+
+    h3 {
+      position: absolute;
+      top: 160px;
+    }
+
+    .topSection {
+      margin: 0px 40px 26px;
+
+      h1 span {
+        font-size: 21px;
+        color: var(--orange);
+        font-weight: 400;
+      }
+      p {
+        font-size: 16px;
+        line-height: 157%;
+      }
+    }
+
+    hr {
+      width: 295px;
+      margin: 10px 0px;
+    }
+
+    h3 {
+      font-size: 36px;
+    }
+  }
+
+  .planCard:nth-child(2) {
+    background-color: var(--orange);
+
+    .dark-btn {
+      background: #000;
+      border: none;
+    }
+
+    .topSection h1 span {
+      font-size: 21px;
+      color: #fff;
+    }
+  }
+}
+
+.dark-btn {
+  background-color: transparent;
+  border: 18px;
+  border-radius: 25px;
+  border: 1px solid white;
+  padding: 20px 71px;
+  margin-top: 21px;
+  display: flex;
+  gap: 25px;
+  font-size: 22px;
+  align-items: center;
+}
+
+/* training step */
+
+#trainingstep {
+  padding-top: 158px;
+  padding-bottom: 33px;
+  border-radius: 0px 0px 80px 80px;
+}
+
+#trainingstep .firstTrainingContainer {
+  padding: 60px 0px;
+  margin: 29px 28px;
+
+  .container {
+    display: flex;
+    gap: 175px;
+  }
+}
+
+.leftContainer:nth-child(1),
+.leftContainer:nth-child(3),
+.rightContainer:nth-child(2) {
+  width: 724px;
+  height: 724px;
+
+  img {
+    border-radius: 85px;
+    object-fit: cover;
+    /* background: linear-gradient(to bottom right, #000000, #434343); */
+  }
+}
+
+#trainingstep .secondTrainingContainer {
+  padding: 53px 0px;
+
+  .container {
+    display: flex;
+    gap: 175px;
+  }
+}
+
+#trainingstep .thirdTrainingContainer {
+  padding: 62px 0px;
+  margin-top: 33px;
+
+  .container {
+    display: flex;
+    gap: 175px;
+  }
+}
+
+#trainingstep .firstTrainingContainer .rightContainer,
+#trainingstep .secondTrainingContainer .leftContainer,
+#trainingstep .thirdTrainingContainer .rightContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  align-items: start;
+  justify-content: center;
+}
+
+#trainingstep .firstTrainingContainer .rightContainer p,
+#trainingstep .thirdTrainingContainer .rightContainer p {
+  font-size: 27px;
+  line-height: 168%;
+}
+
+#trainingstep .thirdTrainingContainer .rightContainer h1 {
+  text-align: left;
+}
+
+#trainingstep .firstTrainingContainer .rightContainer .textContainer,
+#trainingstep .thirdTrainingContainer .rightContainer .textContainer {
+  display: flex;
+  gap: 79px;
+
+  h1 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    i {
+      color: #33363f;
+      font-size: 24px;
+    }
+    span {
+      color: var(--orange);
+    }
+  }
+}
+
+#trainingstep .secondTrainingContainer .leftContainer {
+  gap: 50px;
+
+  .works {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    .work {
+      display: flex;
+      gap: 53px;
+
+      span {
+        width: 124px;
+        height: 124px;
+        background-color: #f1f1f1;
+        color: #545454;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        i {
+          font-size: 38px;
+        }
+      }
+
+      h3 {
+        font-size: 27px;
+        line-height: 120%;
+      }
+
+      p {
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 154%;
+      }
+    }
+  }
+}
+
+#map {
+  padding: 104px 0px 72px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 66px;
+
+    .mapContainer {
+      position: relative;
+
+      /* .gradient {
+        position: absolute;
+        inset: 0;
+       background: linear-gradient(to bottom top, #000000, #434343);
+
+      } */
+      .locationContainer {
+        position: absolute;
+        display: flex;
+        bottom: 0;
+        left: 200px;
+        gap:900px;
+      }
+    }
   }
 }
